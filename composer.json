@@ -1,0 +1,22 @@
+{
+    "name": "aslam/laravel-bank-bni",
+    "description": "Laravel package for BNI API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aslam",
+            "email": "iupin5212@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Aslam\\Bni\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
