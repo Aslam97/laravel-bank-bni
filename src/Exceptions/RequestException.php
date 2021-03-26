@@ -2,21 +2,21 @@
 
 namespace Aslam\Bni\Exceptions;
 
-use Aslam\Bri\Response;
+use Aslam\Bni\Response;
 
 class RequestException extends HttpClientException
 {
     /**
      * The response instance.
      *
-     * @var \Aslam\Bri\Response
+     * @var \Aslam\Bni\Response
      */
     public $response;
 
     /**
      * Create a new exception instance.
      *
-     * @param  \Aslam\Bri\Response  $response
+     * @param  \Aslam\Bni\Response  $response
      * @return void
      */
     public function __construct(Response $response)
@@ -29,7 +29,7 @@ class RequestException extends HttpClientException
     /**
      * Prepare the exception message.
      *
-     * @param  \Aslam\Bri\Response  $response
+     * @param  \Aslam\Bni\Response  $response
      * @return string
      */
     protected function prepareMessage(Response $response)

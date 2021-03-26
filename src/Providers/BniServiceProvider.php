@@ -32,7 +32,7 @@ class BniServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__ . '/../../config/bank-bni.php', 'bank-bni');
 
         $this->app->singleton('BniAPI', function () {
-            return new Bri();
+            return new Bni();
         });
     }
 }
