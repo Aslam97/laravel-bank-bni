@@ -59,7 +59,6 @@ class Bni
 
                 // set body
                 $options['json'] = generate_signature($data);
-                // dd($options);
             }
 
             return tap(

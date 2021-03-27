@@ -48,7 +48,7 @@ if (!function_exists('signature')) {
         $jwtSignature = $base64UrlHeader . '.' . $base64UrlPayload . '.' . $base64UrlSignature;
 
         $payload = array_merge($payload, ['signature' => $jwtSignature]);
-        // dd($payload);
+
         return $payload;
     }
 }
