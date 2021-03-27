@@ -1,22 +1,56 @@
 {
-    "name": "aslam/laravel-bank-bni",
-    "description": "Laravel package for BNI API",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Aslam",
-            "email": "iupin5212@gmail.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "Aslam\\Bni\\": "src/"
-        },
-        "files": [
-            "src/helpers.php"
-        ]
+  "name": "aslam/laravel-bank-bni",
+  "description": "Laravel package for BNI API",
+  "keywords": [
+    "laravel-bni",
+    "bni-api",
+    "laravel-bank-bni"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Aslam",
+      "email": "iupin5212@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Aslam\\Bni\\": "src/"
     },
-    "minimum-stability": "dev",
-    "require": {}
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Aslam\\Bni\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Aslam\\Bni\\Providers\\BniServiceProvider"
+      ],
+      "aliases": {
+        "BniAPI": "Aslam\\Bni\\Facades\\BniFacade"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.2|^8.0",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^7.2",
+    "illuminate/collections": "^6.0 || ^7.0 || ^8.0",
+    "illuminate/macroable": "^6.0 || ^7.0 || ^8.0",
+    "illuminate/support": "^6.0 || ^7.0 || ^8.0"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "prefer-stable": true,
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  }
 }
