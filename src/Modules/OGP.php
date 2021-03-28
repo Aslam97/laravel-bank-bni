@@ -1,10 +1,14 @@
 <?php
 
-namespace Aslam\Bni;
+/**
+ * OGP (One Gate Payment)
+ */
+
+namespace Aslam\Bni\Modules;
 
 use Aslam\Bni\Bni;
 
-class H2H extends Bni
+class OGP extends Bni
 {
     public function __construct($token)
     {
@@ -80,30 +84,6 @@ class H2H extends Bni
     public function getInterBankPayment(array $fields)
     {
         $requestUrl = $this->apiUrl . '/H2H/v2/getinterbankpayment';
-        return $this->sendRequest('POST', $requestUrl, $fields);
-    }
-
-    /**
-     * holdAmount
-     *
-     * @param  array $fields
-     * @return \Aslam\Bni\Response
-     */
-    public function holdAmount(array $fields)
-    {
-        $requestUrl = $this->apiUrl . '/H2H/v2/holdamount';
-        return $this->sendRequest('POST', $requestUrl, $fields);
-    }
-
-    /**
-     * holdAmountRelease
-     *
-     * @param  array $fields
-     * @return \Aslam\Bni\Response
-     */
-    public function holdAmountRelease(array $fields)
-    {
-        $requestUrl = $this->apiUrl . '/H2H/v2/holdamountrelease';
         return $this->sendRequest('POST', $requestUrl, $fields);
     }
 }

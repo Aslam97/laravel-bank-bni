@@ -4,7 +4,7 @@ namespace Aslam\Bni;
 
 use Aslam\Bni\Exceptions\ConnectionException;
 use Aslam\Bni\Exceptions\RequestException;
-use Aslam\Bni\H2H;
+use Aslam\Bni\Modules\OGP;
 use Aslam\Bni\Traits;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ConnectException;
@@ -13,14 +13,40 @@ class Bni
 {
     use Traits\Token;
 
+    /**
+     * API url
+     *
+     * @var string
+     */
     protected $apiUrl;
 
+    /**
+     * Application client Id
+     *
+     * @var string
+     */
     private $clientId;
 
+    /**
+     * Application client secret
+     *
+     * @var string
+     */
     private $clientSecret;
 
+    /**
+     * token
+     *
+     * @var string
+     */
     private $token;
 
+    /**
+     * Init
+     *
+     * @param  mixed $token
+     * @return void
+     */
     public function __construct($token = null)
     {
         $this->apiUrl = config('bank-bni.api_url');
@@ -47,7 +73,6 @@ class Bni
             if (!$this->token) {
                 $options = array_merge($options, $data);
             } else {
-
                 // set token
                 $options['query'] = ['access_token' => $this->token];
 
@@ -92,8 +117,13 @@ class Bni
         return $this;
     }
 
-    public function h2h()
+    /**
+     * One Gate Payment
+     *
+     * @return \Aslam\Bni\Modules\OGP
+     */
+    public function oneGatePayment()
     {
-        return new H2H($this->token);
+        return new OGP($this->token);
     }
 }
