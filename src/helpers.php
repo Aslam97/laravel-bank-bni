@@ -7,7 +7,7 @@ if (!function_exists('bniapi')) {
     /**
      * bniapi
      *
-     * @return Bri
+     * @return Bni
      */
     function bniapi()
     {
