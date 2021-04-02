@@ -7,7 +7,7 @@ trait Token
     /**
      * Get Bni Token
      *
-     * @return \Aslam\Bni\Response
+     * @return \Aslam\Response\Response
      */
     public function getToken()
     {

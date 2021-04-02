@@ -2,10 +2,11 @@
 
 namespace Aslam\Bni;
 
-use Aslam\Bni\Exceptions\ConnectionException;
-use Aslam\Bni\Exceptions\RequestException;
 use Aslam\Bni\Modules\OGP;
 use Aslam\Bni\Traits;
+use Aslam\Response\Exceptions\ConnectionException;
+use Aslam\Response\Exceptions\RequestException;
+use Aslam\Response\Response;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ConnectException;
 
@@ -61,9 +62,9 @@ class Bni
      * @param  string $httpMethod
      * @param  string $requestUrl
      * @param  array $options
-     * @return \Aslam\Bni\Response
+     * @return \Aslam\Response\Response
      *
-     * @throws \Aslam\Bni\Exceptions\RequestException
+     * @throws \Aslam\Response\Exceptions\RequestException
      */
     public function sendRequest(string $httpMethod, string $requestUrl, array $data = [])
     {

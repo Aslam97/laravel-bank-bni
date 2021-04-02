@@ -19,7 +19,7 @@ class OGP extends Bni
      * getBalance
      *
      * @param  string $accountNo
-     * @return \Aslam\Bni\Response
+     * @return \Aslam\Response\Response
      */
     public function getBalance(string $accountNo)
     {
@@ -31,7 +31,7 @@ class OGP extends Bni
      * getInHouseInquiry
      *
      * @param  string $accountNo
-     * @return \Aslam\Bni\Response
+     * @return \Aslam\Response\Response
      */
     public function getInHouseInquiry(string $accountNo)
     {
@@ -43,7 +43,7 @@ class OGP extends Bni
      * doPayment
      *
      * @param  array $fields
-     * @return \Aslam\Bni\Response
+     * @return \Aslam\Response\Response
      */
     public function doPayment(array $fields)
     {
@@ -55,7 +55,7 @@ class OGP extends Bni
      * getPaymentStatus
      *
      * @param  string $customerReferenceNumber
-     * @return \Aslam\Bni\Response
+     * @return \Aslam\Response\Response
      */
     public function getPaymentStatus(string $customerReferenceNumber)
     {
@@ -67,7 +67,7 @@ class OGP extends Bni
      * getInterBankInquiry
      *
      * @param  array $fields
-     * @return \Aslam\Bni\Response
+     * @return \Aslam\Response\Response
      */
     public function getInterBankInquiry(array $fields)
     {
@@ -79,7 +79,7 @@ class OGP extends Bni
      * getInterBankPayment
      *
      * @param  array $fields
-     * @return \Aslam\Bni\Response
+     * @return \Aslam\Response\Response
      */
     public function getInterBankPayment(array $fields)
     {
